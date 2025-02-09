@@ -27,7 +27,6 @@ export default defineConfig({
       },
     }),
   ],
-  const env = loadEnv(mode, process.cwd(), '')
   return {
     define: {
       __ALLOWED_HOSTS__: JSON.stringify(process.env.VITE_SERVER_ALLOWED_HOSTS)
