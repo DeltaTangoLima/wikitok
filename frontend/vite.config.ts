@@ -5,35 +5,29 @@ import { VitePWA } from "vite-plugin-pwa";
 
 // https://vite.dev/config/
 export default defineConfig({
-  const env = loadEnv(mode, process.cwd(), '')
-  return {
-    plugins: [
-      react(),
-      tailwindcss(),
-      VitePWA({
-        registerType: "autoUpdate",
-        manifest: {
-          name: "WikiTok",
-          short_name: "WikiTok",
-          icons: [
-            {
-              src: "/wiki-logo.svg",
-              sizes: "any",
-              type: "image/svg+xml",
-            },
-          ],
-          start_url: "/",
-          display: "standalone",
-          background_color: "#ffffff",
-          theme_color: "#000000",
-        },
-      }),
-    ],
-    define: {
-      __ALLOWED_HOSTS__: JSON.stringify(env.VITE_SERVER_ALLOWED_HOSTS),
-    },
-    server: {
-      allowedHosts: __ALLOWED_HOSTS__
-    },
+  plugins: [
+    react(),
+    tailwindcss(),
+    VitePWA({
+      registerType: "autoUpdate",
+      manifest: {
+        name: "WikiTok",
+        short_name: "WikiTok",
+        icons: [
+          {
+            src: "/wiki-logo.svg",
+            sizes: "any",
+            type: "image/svg+xml",
+          },
+        ],
+        start_url: "/",
+        display: "standalone",
+        background_color: "#ffffff",
+        theme_color: "#000000",
+      },
+    }),
+  ],
+  server: {
+    allowedHosts: VITE_SERVER_ALLOWED_HOSTS
   },
 });
