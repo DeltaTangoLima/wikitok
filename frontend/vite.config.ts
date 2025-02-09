@@ -27,9 +27,11 @@ export default defineConfig({
       },
     }),
   ],
+  const env = loadEnv(mode, process.cwd(), '')
   return: {
+    // vite config
     define: {
-      __ALLOWED_HOSTS__: JSON.stringify(process.env.VITE_SERVER_ALLOWED_HOSTS)
+      __ALLOWED_HOSTS__: JSON.stringify(env.VITE_SERVER_ALLOWED_HOSTS),
     },
   },
 	server: {
