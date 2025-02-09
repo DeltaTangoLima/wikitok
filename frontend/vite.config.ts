@@ -27,7 +27,10 @@ export default defineConfig({
       },
     }),
   ],
+  define: {
+    __ALLOWED_HOSTS__: JSON.stringify(process.env.VITE_SERVER_ALLOWED_HOSTS)
+  },
 	server: {
-		allowedHosts: ['wikitok.leh.mn']
+		allowedHosts: __ALLOWED_HOSTS__
 	},
 });
