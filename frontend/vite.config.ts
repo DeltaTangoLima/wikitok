@@ -28,6 +28,6 @@ export default defineConfig({
     }),
   ],
   server: {
-    allowedHosts: import.meta.env.VITE_SERVER_ALLOWED_HOSTS,
+    allowedHosts: "wikitok.leh.mn",
   },
 });
