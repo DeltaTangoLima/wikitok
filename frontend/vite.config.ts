@@ -27,7 +27,7 @@ export default defineConfig({
       },
     }),
   ],
-  return {
+  return: {
     define: {
       __ALLOWED_HOSTS__: JSON.stringify(process.env.VITE_SERVER_ALLOWED_HOSTS)
     },
