@@ -27,7 +27,7 @@ export default defineConfig({
       },
     }),
   ],
-  server: {
-    allowedHosts: "wikitok.leh.mn",
-  },
+	server: {
+		allowedHosts: true
+	},
 });
